@@ -5,9 +5,7 @@ import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
 
-# =========================================================
 # 1. Data loading and preprocessing (cached)
-# =========================================================
 @st.cache_data
 def load_and_preprocess_data(csv_path: str = "steam.csv"):
     df = pd.read_csv(csv_path)
@@ -65,9 +63,7 @@ def build_tfidf_matrix(df: pd.DataFrame):
     return tfidf_matrix
 
 
-# =========================================================
 # 2. Similarity and filter helpers
-# =========================================================
 def get_similarity_series(idx, tfidf_matrix, df):
     """
     Returns a pandas Series of cosine similarities between the game at index idx
@@ -232,9 +228,7 @@ def recommend_with_filters(
         )
 
 
-# =========================================================
 # 3. Streamlit UI
-# =========================================================
 def main():
     st.title("🎮 Game Recommendation Platform")
     st.write(
@@ -373,3 +367,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
