@@ -7,7 +7,7 @@ from sklearn.metrics.pairwise import linear_kernel
 
 # 1. Data loading and preprocessing (cached)
 @st.cache_data
-def load_and_preprocess_data(csv_path: str = "steam.csv"):
+def load_and_preprocess_data(csv_path: str = "sample_steam.csv"):
     df = pd.read_csv(csv_path)
 
     # Keep only English games (1 == English) if that column exists
@@ -367,4 +367,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
