@@ -1,4 +1,4 @@
-# Steam Game Recommendation System 🎮
+# Steam - Game Recommendation System 🎮
 
 This project is a **content-based recommendation system** for Steam games, built using **Python, scikit-learn (TF-IDF + cosine similarity), and Streamlit**.
 
