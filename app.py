@@ -236,7 +236,7 @@ def main():
     )
 
     # Load data and model
-    df, appid_to_index = load_and_preprocess_data("steam.csv")
+    df, appid_to_index = load_and_preprocess_data("sample_steam.csv")
     tfidf_matrix = build_tfidf_matrix(df)
 
     # ----- Build genre dropdown options -----
@@ -367,5 +367,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
